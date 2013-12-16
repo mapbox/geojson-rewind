@@ -30,5 +30,8 @@
     "geojson-area": "0.1.0",
     "minimist": "0.0.5",
     "concat-stream": "~1.2.1"
+  },
+  "devDependencies": {
+    "tap": "~0.4.6"
   }
 }
