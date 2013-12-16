@@ -27,6 +27,8 @@
   },
   "homepage": "https://github.com/mapbox/geojson-rewind",
   "dependencies": {
-    "geojson-area": "0.1.0"
+    "geojson-area": "0.1.0",
+    "minimist": "0.0.5",
+    "concat-stream": "~1.2.1"
   }
 }
