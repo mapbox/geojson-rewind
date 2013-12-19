@@ -28,10 +28,10 @@ copy `geojson-rewind.js`
 
 ## api
 
-`rewind(geojson, counterclockwise)`
+`rewind(geojson, clockwise)`
 
 Given a GeoJSON FeatureCollection, Feature, or Geometry, return a version
 with inner and outer rings of different winding orders.
 
-If `counterclockwise` is `true`, the outer ring is counterclockwise, otherwise
-it is clockwise.
+If `clockwise` is `true`, the outer ring is clockwise, otherwise
+it is counterclockwise.

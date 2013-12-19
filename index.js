@@ -33,9 +33,9 @@ function correct(_, outer) {
 
 function correctRings(_, outer) {
     outer = !!outer;
-    _[0] = wind(_[0], !outer);
+    _[0] = wind(_[0], outer);
     for (var i = 1; i < _.length; i++) {
-        _[i] = wind(_[i], outer);
+        _[i] = wind(_[i], !outer);
     }
     return _;
 }
