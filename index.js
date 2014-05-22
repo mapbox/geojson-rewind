@@ -32,10 +32,20 @@ function correct(_, outer) {
 }
 
 function correctRings(_, outer) {
-    outer = !!outer;
-    _[0] = wind(_[0], outer);
+    var first, rest;
+    if (outer === 'clockwise') {
+        first = false;
+        rest = false;
+    } else if (outer === 'counterclockwise') {
+        first = true;
+        rest = true;
+    } else {
+        first = !outer;
+        rest = !!outer;
+    }
+    _[0] = wind(_[0], first);
     for (var i = 1; i < _.length; i++) {
-        _[i] = wind(_[i], !outer);
+        _[i] = wind(_[i], rest);
     }
     return _;
 }

@@ -10,5 +10,7 @@ test('rewind', function(t) {
     t.deepEqual(rewind(f('./test/rev.input.geojson')), f('./test/rev.output.geojson'), 'flips rings');
     t.deepEqual(rewind(f('./test/featuregood.input.geojson')), f('./test/featuregood.output.geojson'), 'does not muck up props');
     t.deepEqual(rewind(f('./test/flip.input.geojson'), true), f('./test/flip.output.geojson'), 'does not muck up props');
+    t.deepEqual(rewind(f('./test/flip.input.geojson'), 'clockwise'), f('./test/clockwise.output.geojson'), 'works clockwise');
+    t.deepEqual(rewind(f('./test/flip.input.geojson'), 'counterclockwise'), f('./test/counterclockwise.output.geojson'), 'works counterclockwise');
     t.end();
 });
