@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node test/rewind.js"
+    "test": "tap test/rewind.js",
+    "cov": "istanbul cover test/rewind.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,7 @@
     "coordinates"
   ],
   "author": "Tom MacWright",
-  "license": "BSD-2-Clause",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/mapbox/geojson-rewind/issues"
   },
@@ -32,6 +33,7 @@
     "concat-stream": "~1.2.1"
   },
   "devDependencies": {
-    "tap": "~0.4.6"
+    "tap": "~0.4.6",
+    "istanbul": "~0.2.13"
   }
 }
