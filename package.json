@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "enforce winding order for geojson",
   "main": "index.js",
+  "bin": "geojson-rewind",
   "directories": {
     "test": "test"
   },
