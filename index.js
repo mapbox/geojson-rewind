@@ -13,6 +13,9 @@ function rewind(gj, outer) {
         case 'Polygon':
         case 'MultiPolygon':
             return correct(gj, outer);
+        case 'Feature':
+        case 'FeatureCollection':
+          throw new TypeError('we need a geometry');
         default:
             return gj;
     }
