@@ -4,7 +4,7 @@ var rewind = require('./'),
     concat = require('concat-stream'),
     fs = require('fs'),
     argv = require('minimist')(process.argv.slice(2), {
-        boolean: 'counterclockwise'
+        boolean: 'clockwise'
     });
 
 const help = `
@@ -15,10 +15,10 @@ usage:
 
 options:
 
-    --counterclockwise
+    --clockwise
 
-    if specified, set outer ring to counterclockwise
-    and inner rings to clockwise`.trim();
+    if specified, set outer ring to clockwise
+    and inner rings to counterclockwise`.trim();
 
 if (process.stdin.isTTY && !argv._[0]) {
     console.log(help);
@@ -28,5 +28,5 @@ if (process.stdin.isTTY && !argv._[0]) {
 (argv._.length ? fs.createReadStream(argv._[0]) : process.stdin).pipe(concat(convert));
 
 function convert(data) {
-    process.stdout.write(JSON.stringify(rewind(JSON.parse(data), argv.counterclockwise), argv));
+    process.stdout.write(JSON.stringify(rewind(JSON.parse(data), argv.clockwise)));
 }
