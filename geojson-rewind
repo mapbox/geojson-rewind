@@ -4,7 +4,7 @@ var rewind = require('./'),
     concat = require('concat-stream'),
     fs = require('fs'),
     argv = require('minimist')(process.argv.slice(2), {
-        boolean: 'counterclockwise'
+        boolean: 'clockwise'
     });
 
 if (process.stdin.isTTY && !argv._[0]) {
@@ -15,5 +15,5 @@ if (process.stdin.isTTY && !argv._[0]) {
 (argv._.length ? fs.createReadStream(argv._[0]) : process.stdin).pipe(concat(convert));
 
 function convert(data) {
-    process.stdout.write(JSON.stringify(rewind(JSON.parse(data), argv.counterclockwise), argv));
+    process.stdout.write(JSON.stringify(rewind(JSON.parse(data), argv.clockwise), argv));
 }
