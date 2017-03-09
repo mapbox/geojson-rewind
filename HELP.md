@@ -7,7 +7,7 @@ usage:
 
 options:
 
-    --counterclockwise
+    --clockwise
 
-    if specified, set outer ring to counterclockwise
-    and inner rings to clockwise
+    if specified, set outer ring to clockwise
+    and inner rings to counterclockwise
