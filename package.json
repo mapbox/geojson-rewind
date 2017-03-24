@@ -8,7 +8,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "tap test/rewind.js --coverage"
+    "test": "tap test/rewind.js --coverage",
+    "build": "browserify -s geojsonRewind index.js > geojson-rewind.js && uglifyjs geojson-rewind.js -c > geojson-rewind.min.js",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -33,8 +35,10 @@
     "concat-stream": "~1.5.2"
   },
   "devDependencies": {
+    "browserify": "^14.1.0",
     "cz-conventional-changelog": "^1.2.0",
-    "tap": "~8.0.1"
+    "tap": "~8.0.1",
+    "uglify-js": "^2.8.15"
   },
   "config": {
     "commitizen": {

@@ -19,10 +19,11 @@ as console utility
     # use
     geojson-rewind foo.geojson
 
-as browser library
+as browser library (add script tag to `<head>` in html file)
 
-copy `geojson-rewind.js`
-
+```html
+<script src="https://unpkg.com/geojson-rewind/geojson-rewind.js"></script>
+```
 ## api
 
 `rewind(geojson, clockwise)`
