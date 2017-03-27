@@ -30,7 +30,7 @@
   "dependencies": {
     "@mapbox/geojson-area": "0.2.1",
     "minimist": "1.2.0",
-    "concat-stream": "~1.5.2"
+    "concat-stream": "~1.6.0"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^1.2.0",
