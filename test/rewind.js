@@ -10,7 +10,7 @@ function fixture(t, name, title) {
     var result = rewind(f(name));
     var outputName = name.replace('.input.', '.output.');
     if (process.env.UPDATE) {
-        fs.writeFileSync(outputName, JSON.stringify(result, 4));
+        fs.writeFileSync(outputName, JSON.stringify(result, null, 4));
     }
     var expect = f(outputName);
     t.deepEqual(result, expect, title);
