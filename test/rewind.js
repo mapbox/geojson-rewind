@@ -27,7 +27,8 @@ function fixture(t, name, title) {
 test('rewind', function(t) {
     fixture(t, __dirname + '/fixture/featuregood.input.geojson', 'feature-good');
     fixture(t, __dirname + '/fixture/flip.input.geojson', 'flip');
-    fixture(t, __dirname + '/fixture/collection.input.geojson', 'collection');
+    fixture(t, __dirname + '/fixture/collection.input.geojson', 'feature-collection');
+    fixture(t, __dirname + '/fixture/geomcollection.input.geojson', 'geometry-collection');
     fixture(t, __dirname + '/fixture/multipolygon.input.geojson', 'multipolygon');
     fixture(t, __dirname + '/fixture/rev.input.geojson', 'rev');
     t.end();

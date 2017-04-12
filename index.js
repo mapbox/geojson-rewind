@@ -7,6 +7,9 @@ function rewind(gj, outer) {
         case 'FeatureCollection':
             gj.features = gj.features.map(curryOuter(rewind, outer));
             return gj;
+        case 'GeometryCollection':
+            gj.geometries = gj.geometries.map(curryOuter(rewind, outer));
+            return gj;
         case 'Feature':
             gj.geometry = rewind(gj.geometry, outer);
             return gj;
