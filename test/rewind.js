@@ -1,6 +1,7 @@
 var rewind = require('../'),
     fs = require('fs'),
     test = require('tap').test;
+    hint = require('@mapbox/geojsonhint').hint;
 
 function f(_) {
     return JSON.parse(fs.readFileSync(_, 'utf8'));
@@ -10,7 +11,12 @@ function fixture(t, name, title) {
     var result = rewind(f(name));
     var outputName = name.replace('.input.', '.output.');
     if (process.env.UPDATE) {
-        fs.writeFileSync(outputName, JSON.stringify(result, null, 4));
+        var errors = hint(result)
+        if (errors.length) errors.forEach(function (e) {
+            t.fail(outputName + 'line ' + e.line + ' - ' + e.message + ' - ' + e.level || 'error');
+        }) else {
+            fs.writeFileSync(outputName, JSON.stringify(result, null, 4));
+        }
     }
     var expect = f(outputName);
     t.deepEqual(result, expect, title);

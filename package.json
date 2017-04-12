@@ -33,6 +33,7 @@
     "concat-stream": "~1.5.2"
   },
   "devDependencies": {
+    "@mapbox/geojsonhint": "^2.0.1",
     "cz-conventional-changelog": "^1.2.0",
     "tap": "~8.0.1"
   },
