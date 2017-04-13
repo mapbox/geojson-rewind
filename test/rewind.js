@@ -12,9 +12,11 @@ function fixture(t, name, title) {
     var outputName = name.replace('.input.', '.output.');
     if (process.env.UPDATE) {
         var errors = hint(result)
-        if (errors.length) errors.forEach(function (e) {
-            t.fail(outputName + 'line ' + e.line + ' - ' + e.message + ' - ' + e.level || 'error');
-        }) else {
+        if (errors.length) {
+            errors.forEach(function (e) {
+                t.fail(outputName + 'line ' + e.line + ' - ' + e.message + ' - ' + e.level || 'error');
+            })
+        } else {
             fs.writeFileSync(outputName, JSON.stringify(result, null, 4));
         }
     }
