@@ -1,6 +1,6 @@
 var rewind = require('../'),
     fs = require('fs'),
-    test = require('tap').test;
+    test = require('tape');
 
 function f(_) {
     return JSON.parse(fs.readFileSync(_, 'utf8'));

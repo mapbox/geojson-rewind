@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "tap test/rewind.js --coverage"
+    "test": "tape test/rewind.js"
   },
   "repository": {
     "type": "git",
@@ -28,13 +28,13 @@
   },
   "homepage": "https://github.com/mapbox/geojson-rewind",
   "dependencies": {
-    "@mapbox/geojson-area": "0.2.1",
-    "minimist": "1.2.0",
-    "concat-stream": "~1.5.2"
+    "@mapbox/geojson-area": "0.2.2",
+    "concat-stream": "~1.6.0",
+    "minimist": "1.2.0"
   },
   "devDependencies": {
-    "cz-conventional-changelog": "^1.2.0",
-    "tap": "~8.0.1"
+    "cz-conventional-changelog": "^2.0.0",
+    "tape": "^4.8.0"
   },
   "config": {
     "commitizen": {
