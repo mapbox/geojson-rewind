@@ -2,7 +2,7 @@
 
 # geojson-rewind
 
-The [GeoJSON](https://tools.ietf.org/html/rfc7946) specification is picky about winding order.
+The [GeoJSON](https://tools.ietf.org/html/rfc7946) specification is [picky about winding order](https://tools.ietf.org/html/rfc7946#section-3.1.6).
 
 This helps you generate compliant Polygon and MultiPolygon geometries. Furthermore it lets you use [Canvas](http://www.bit-101.com/blog/?p=3702) and other drawing libraries's default behavior to color the interior rings of Polygon and MultiPolygon features.
 
