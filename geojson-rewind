@@ -3,6 +3,7 @@
 var rewind = require('./'),
     concat = require('concat-stream'),
     fs = require('fs'),
+    sharkdown = require('sharkdown'),
     argv = require('minimist')(process.argv.slice(2), {
         boolean: 'counterclockwise'
     });
