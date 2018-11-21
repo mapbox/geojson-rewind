@@ -1,5 +1,5 @@
 {
-  "name": "geojson-rewind",
+  "name": "@mapbox/geojson-rewind",
   "version": "0.4.0",
   "description": "enforce winding order for geojson",
   "main": "index.js",
