@@ -33,6 +33,8 @@ function correct(_, outer) {
 }
 
 function correctRings(_, outer) {
+    if (_.length === 0) { return _; }
+
     outer = !!outer;
     _[0] = wind(_[0], !outer);
     for (var i = 1; i < _.length; i++) {
