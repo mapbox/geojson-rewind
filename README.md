@@ -10,12 +10,12 @@ This helps you generate compliant Polygon and MultiPolygon geometries. Furthermo
 
 as npm module:
 
-    npm install --save geojson-rewind
+    npm install --save @mapbox/geojson-rewind
 
 as console utility
 
     # install
-    npm install -g geojson-rewind
+    npm install -g @mapbox/geojson-rewind
     # use
     geojson-rewind foo.geojson
 
