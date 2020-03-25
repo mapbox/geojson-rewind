@@ -24,6 +24,8 @@ function rewind(gj, outer) {
 }
 
 function rewindRings(rings, outer) {
+    if (rings.length === 0) return;
+
     rewindRing(rings[0], outer);
     for (var i = 1; i < rings.length; i++) {
         rewindRing(rings[i], !outer);
