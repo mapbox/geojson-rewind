@@ -3,13 +3,25 @@
 var rewind = require('./'),
     concat = require('concat-stream'),
     fs = require('fs'),
-    sharkdown = require('sharkdown'),
     argv = require('minimist')(process.argv.slice(2), {
         boolean: 'counterclockwise'
     });
 
+const help = `
+usage:
+
+    geojson-rewind < foo.geojson > foo.geojson
+    geojson-rewind foo.geojson > bar.geojson
+
+options:
+
+    --counterclockwise
+
+    if specified, set outer ring to counterclockwise
+    and inner rings to clockwise`.trim();
+
 if (process.stdin.isTTY && !argv._[0]) {
-    process.stdout.write(sharkdown(fs.readFileSync(__dirname + '/HELP.md')));
+    console.log(help);
     process.exit(1);
 }
 
