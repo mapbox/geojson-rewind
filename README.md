@@ -6,24 +6,22 @@ The [GeoJSON](https://tools.ietf.org/html/rfc7946) specification is [picky about
 
 This helps you generate compliant Polygon and MultiPolygon geometries. Furthermore it lets you use [Canvas](http://www.bit-101.com/blog/?p=3702) and other drawing libraries's default behavior to color the interior rings of Polygon and MultiPolygon features.
 
-## usage
+## Usage
 
-as npm module:
+As NPM module:
 
     npm install --save @mapbox/geojson-rewind
 
-as console utility
+As a console utility:
 
     # install
     npm install -g @mapbox/geojson-rewind
     # use
     geojson-rewind foo.geojson
 
-as browser library
+As a browser library: [geojson-rewind.js](https://bundle.run/geojson-rewind)
 
-copy `geojson-rewind.js`
-
-## api
+## API
 
 `rewind(geojson, clockwise)`
 
