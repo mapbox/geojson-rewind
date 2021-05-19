@@ -36,7 +36,6 @@
     "minimist": "^1.2.5"
   },
   "devDependencies": {
-    "@mapbox/geojsonhint": "^3.0.0",
     "tape": "^4.13.2"
   }
 }
