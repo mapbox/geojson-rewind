@@ -32,10 +32,10 @@
   },
   "homepage": "https://github.com/mapbox/geojson-rewind",
   "dependencies": {
-    "get-stream": "^6.0.0",
+    "get-stream": "^6.0.1",
     "minimist": "^1.2.5"
   },
   "devDependencies": {
-    "tape": "^4.13.2"
+    "tape": "^5.2.2"
   }
 }
