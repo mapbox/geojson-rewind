@@ -3,8 +3,10 @@
   "version": "0.5.2",
   "description": "enforce winding order for geojson",
   "main": "index.js",
-  "bin": "geojson-rewind",
   "type": "module",
+  "bin": {
+    "geojson-rewind": "geojson-rewind.js"
+  },
   "directories": {
     "test": "test"
   },
@@ -13,7 +15,7 @@
   },
   "files": [
     "index.js",
-    "geojson-rewind"
+    "geojson-rewind.js"
   ],
   "repository": {
     "type": "git",
