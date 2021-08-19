@@ -1,7 +1,4 @@
-
-module.exports = rewind;
-
-function rewind(gj, outer) {
+export default function rewind(gj, outer) {
     var type = gj && gj.type, i;
 
     if (type === 'FeatureCollection') {
