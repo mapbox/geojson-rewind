@@ -4,6 +4,7 @@
   "description": "enforce winding order for geojson",
   "main": "index.cjs",
   "type": "module",
+  "module": "index.js",
   "bin": {
     "geojson-rewind": "geojson-rewind.js"
   },
