@@ -36,6 +36,6 @@
     "minimist": "^1.2.6"
   },
   "devDependencies": {
-    "tape": "^5.2.2"
+    "tape": "^5.5.3"
   }
 }
