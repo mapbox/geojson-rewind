@@ -33,7 +33,7 @@
   "homepage": "https://github.com/mapbox/geojson-rewind",
   "dependencies": {
     "get-stream": "^6.0.1",
-    "minimist": "^1.2.6"
+    "minimist": "^1.2.7"
   },
   "devDependencies": {
     "tape": "^5.5.3"
