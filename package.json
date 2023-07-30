@@ -46,7 +46,7 @@
     "minimist": "^1.2.7"
   },
   "devDependencies": {
-    "rollup": "^2.56.2",
+    "rollup": "^3.27.0",
     "tape": "^5.5.3"
   }
 }
