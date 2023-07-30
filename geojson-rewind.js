@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 
-var rewind = require('./'),
-    getStream = require('get-stream'),
-    fs = require('fs'),
-    argv = require('minimist')(process.argv.slice(2), {
-        boolean: 'clockwise'
-    });
+import rewind from "@mapbox/geojson-rewind";
+import getStream from "get-stream";
+import fs from "fs";
+import minimist from "minimist";
+
+const argv = minimist(process.argv.slice(2), {
+    boolean: 'clockwise'
+});
 
 const help = `
 usage:
