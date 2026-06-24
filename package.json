@@ -1,6 +1,6 @@
 {
   "name": "@mapbox/geojson-rewind",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "enforce winding order for geojson",
   "main": "index.js",
   "bin": "geojson-rewind",
@@ -37,5 +37,8 @@
   },
   "devDependencies": {
     "tape": "^5.5.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
