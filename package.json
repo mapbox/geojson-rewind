@@ -2,17 +2,27 @@
   "name": "@mapbox/geojson-rewind",
   "version": "0.5.2",
   "description": "enforce winding order for geojson",
-  "main": "index.js",
-  "bin": "geojson-rewind",
+  "main": "index.cjs",
+  "type": "module",
+  "module": "index.js",
+  "bin": {
+    "geojson-rewind": "geojson-rewind.js"
+  },
+  "exports": {
+    "import": "./index.js",
+    "require": "./index.cjs"
+  },
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "tape test/rewind.js"
+    "test": "tape test/rewind.js",
+    "prepare": "rollup -c"
   },
   "files": [
     "index.js",
-    "geojson-rewind"
+    "index.cjs",
+    "geojson-rewind.js"
   ],
   "repository": {
     "type": "git",
@@ -36,6 +46,7 @@
     "minimist": "^1.2.7"
   },
   "devDependencies": {
+    "rollup": "^3.27.0",
     "tape": "^5.5.3"
   }
 }

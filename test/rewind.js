@@ -1,6 +1,9 @@
-var rewind = require('../'),
-    fs = require('fs'),
-    test = require('tape');
+import rewind from "@mapbox/geojson-rewind";
+import fs from 'fs';
+import test from 'tape';
+import { fileURLToPath } from 'url';
+
+const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
 function f(_) {
     return JSON.parse(fs.readFileSync(_, 'utf8'));
