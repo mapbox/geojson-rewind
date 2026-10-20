@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/mapbox/geojson-rewind.git"
+    "url": "git+https://github.com/mapbox/geojson-rewind.git"
   },
   "keywords": [
     "geojson",
@@ -37,5 +37,8 @@
   },
   "devDependencies": {
     "tape": "^5.5.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
